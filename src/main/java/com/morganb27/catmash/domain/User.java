@@ -26,6 +26,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String lastname;
 
+    @Column(nullable = true, unique = true)
+    private String username;
+
     @Column(nullable = false)
     private String password;
 
@@ -38,6 +41,12 @@ public class User implements UserDetails {
 
     public User() {
 
+    }
+
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
     }
 
     @Override
@@ -68,5 +77,8 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public void setUsername(String email) {
     }
 }
