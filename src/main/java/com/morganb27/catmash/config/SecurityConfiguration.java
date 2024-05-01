@@ -27,7 +27,7 @@ public class SecurityConfiguration {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(List.of("http://localhost", "http://localhost:4200"));
+        corsConfiguration.setAllowedOrigins(List.of("http://localhost", "http://localhost:4200", "https://catmash-v1.fly.dev"));
         corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         corsConfiguration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token"));
         corsConfiguration.setAllowCredentials(true);
